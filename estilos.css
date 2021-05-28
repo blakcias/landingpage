@@ -100,7 +100,7 @@ header .logo a {
 
 
 .icono {
-    display: block;
+    display: none;
     
     animation: moverIzquierda 1s ease-in;
 
