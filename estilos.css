@@ -109,7 +109,7 @@ header .logo a {
 
 .retorno {
     position: relative;
-    z-index: 1;
+   /* z-index: 1;*/
     animation: moverIzquierda 1s ease-in;
 
 
