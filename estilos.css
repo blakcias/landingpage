@@ -101,7 +101,7 @@ header .logo a {
 
 .icono {
     display: block;
-    z-index: 100000000;
+    
     animation: moverIzquierda 1s ease-in;
 
 
