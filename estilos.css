@@ -100,8 +100,8 @@ header .logo a {
 
 
 .icono {
-    display: none;
-    
+    display: block;
+    z-index: 100000000;
     animation: moverIzquierda 1s ease-in;
 
 
@@ -109,8 +109,7 @@ header .logo a {
 
 .retorno {
     position: relative;
-   /* z-index: 1;*/
-Display:none;
+    z-index: 1;
     animation: moverIzquierda 1s ease-in;
 
 
@@ -203,15 +202,18 @@ nav a:hover {
     display: flex;
     justify-content: space-evenly;
     margin: auto;
+    align-items: center;
+    
 
 }
+
 
 section {
     height: 650px;
 }
 
 section > img {
-    height: 60%;
+    height: 50%;
 }
 
 
@@ -221,6 +223,7 @@ section > img {
     padding-bottom: 20px;
     border-bottom: 1px solid #000;
     width: 60%;
+    
 
 }
 
@@ -232,11 +235,13 @@ section > img {
 
 #sect1 {
     display: flex;
-    /*background-image:url(images/wave2.png);*/
-    background-repeat: no-repeat;
+    background-image:url(images/Vector%202.png);
+   
     /* Vector 1 */
+    background-repeat: no-repeat;
+    justify-content: flex-end;
 
-    background-image: url(images/Frame%201.png);
+    /*background-image: url(images/Frame%201.png);*/
     
 
 
@@ -457,35 +462,42 @@ footer .redes a {
 }
 
 @media (min-width:450px) and (max-width:599px) {
-    .container {}
+    .main {
+        height: auto;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
 
-    section {
+    .cuerpo {
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
+    }
 
+    .textos h1 {
+        font-size: 30px;
+    }
 
+    .textos h2 {
+        font-size: 15px;
+    }
+
+    .imagengrande img {
+        height: 300px;
+    }
+
+    section img {
+        height: 200px;
+
+    }
+
+    section {
+        flex-wrap: wrap;
     }
 
     .main article {
         width: 100%;
-
     }
 
-    section img {
-        height: 30%;
-        background: green;
-    }
-
-    .textos {}
-
-    .textos h1 {
-        font-size: 40px;
-    }
-
-    .textos h2 {
-        font-size: 20px;
-    }
 
 }
 
@@ -646,11 +658,10 @@ repitaclave {
     max-width: 600px;
     margin: 0 auto;
     
-    background: #ad5389;  /* fallback for old browsers */
+   background: #ad5389;  /* fallback for old browsers */
 background: -webkit-linear-gradient(to right, #3c1053, #ad5389);  /* Chrome 10-25, Safari 5.1-6 */
 background: linear-gradient(to right, #3c1053, #ad5389); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
-    
     
     
     /*background: #DA4453;
