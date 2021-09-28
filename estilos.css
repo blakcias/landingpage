@@ -16,8 +16,7 @@
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
-    
+    font-family: 'Open Sans', sans-serif, cursive;
 }
 
 html {
@@ -99,7 +98,7 @@ header {
     /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #0083B0, #00B4DB);
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #0083B0, #00B4DB);
+    background: linear-gradient(to right, hsl(195, 100%, 35%), #00b3db86), url(images/Fondo.png);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     height: auto;
     padding: 48px;
@@ -136,7 +135,7 @@ header nav a {
 }
 
 .contendornavar {
-    background: #00B4DB;
+    background: #00b3db;
     /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #0083B0, #00B4DB);
     /* Chrome 10-25, Safari 5.1-6 */
@@ -385,7 +384,6 @@ footer .redes a {
 }
 
 @media screen and (max-width: 600px) {
-    .logo {}
     section img {
         height: 40%;
     }
@@ -486,26 +484,13 @@ footer .redes a {
     position: fixed;
     display: flex;
     top: 0;
-    background: #000;
     justify-content: space-around;
     align-items: center;
     height: 100vh;
     right: 0;
-    flex-direction: column;
     width: 100%;
     transition: all 1s ease;
-    background: #bc4e9c;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #f80759, #bc4e9c);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #f80759, #bc4e9c);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    background: #bdc3c7;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #2c3e50, #bdc3c7);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #090e11db;
 }
 
 .uno {
@@ -554,8 +539,7 @@ footer .redes a {
 
 /*FORMULARIO*/
 
-input,
-repitaclave {
+input {
     border: 0;
     outline: 0;
     font-size: 1rem;
@@ -565,78 +549,25 @@ repitaclave {
     font-family: 'Raleway', sans-serif;
 }
 
-
-/*.botonenviar {
-    text-align: center;
-    width: 150px;
-    height: 40px;
-    outline: none;
-    border: 1 solid blue;
-    background-color: cornflowerblue;
-    border-radius: 6px;
-    color: blue;
-    cursor: pointer;
-    transition: all .25s;
-    text-transform: uppercase;
-    margin: 10px;
-    background: red;
-}*/
-
-.fotoformulario {
-    text-align: center;
-}
-
-.fotoformulario img {
-    max-width: 80px;
-    max-height: 80px;
-    border-radius: 50px;
-}
-
-.content {
-    max-width: 900px;
-    margin: 0 auto;
-    padding-top: 2em;
-}
-
-.content .title {
+.title {
+    margin-bottom: 10px;
     text-align: center;
     text-transform: uppercase;
     font-weight: 400;
 }
 
-.form {
-    max-width: 600px;
-    margin: 0 auto;
-    background: #ad5389;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #3c1053, #ad5389);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #3c1053, #ad5389);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    /*background: #DA4453;
-    /* fallback for old browsers */
-    /*background: -webkit-linear-gradient(to right, #89216B, #DA4453);
-    /* Chrome 10-25, Safari 5.1-6 */
-    /*background: linear-gradient(to right, #89216B, #DA4453);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    border-radius: 7px;
-    background: #4ECDC4;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #556270, #4ECDC4);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #556270, #4ECDC4);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    background: #bdc3c7;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #2c3e50, #bdc3c7);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+.dudas {
+    color: #fff;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.form-container {
+.form {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
+    max-width: 600px;
+    margin: 0 auto;
+    background: #647783c7;
+    border-radius: 10px;
 }
 
 .campo {
@@ -651,35 +582,27 @@ repitaclave {
     }
 }
 
-.campo .repitaclave {
-    height: 10em;
-}
-
-.campo .input,
-.campo .repitaclave {
+.campo .input {
     display: block;
     padding: 1em;
     width: 100%;
     transition: all .3s;
-    border-bottom: 2px solid #ec2F4B;
+    border-bottom: 2px solid #1c77a1;
 }
 
-.campo .input:focus,
-.campo .repitaclave:focus {
+.campo .input:focus {
     border-bottom: 2px solid #828282;
 }
 
 .campo .input:valid+.label,
-.campo .input:focus+.label,
-.campo .repitaclave:valid+.label,
-.campo .repitaclave:focus+.label {
+.campo .input:focus+.label {
     top: 1em;
     left: 1em;
     font-size: .9em;
+    color: #828282;
 }
 
-.campo .input:valid,
-.campo .repitaclave:valid {
+.campo .input:valid {
     border-bottom: 2px solid #334dff;
 }
 
@@ -689,16 +612,17 @@ repitaclave {
     left: 2em;
     text-transform: capitalize;
     transition: all .3s;
+    color: #c5c5c5;
 }
 
-.campo .btn-enviar {
-    display: block;
+.campo .btn-enviar {   display: block;
     width: 100%;
     padding: 1em 0;
     box-shadow: 0 0 0 2px #00B7FF;
     color: #00B7FF;
     cursor: pointer;
     transition: all .3s;
+   
 }
 
 .campo .btn-enviar:hover {
