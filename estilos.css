@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -16,7 +17,7 @@
 }
 
 body {
-    font-family: 'Open Sans', sans-serif, cursive;
+    font-family: 'Montserrat', sans-serif;
 }
 
 html {
@@ -78,12 +79,6 @@ header .logo a {
 
 .textos h2 {
     font-size: 20px;
-    animation: moverIzquierda 1s ease-in;
-}
-
-.icono {
-    display: block;
-    z-index: 100000000;
     animation: moverIzquierda 1s ease-in;
 }
 
@@ -173,6 +168,10 @@ nav a:hover {
     align-items: center;
 }
 
+.cuerpo {
+    width: 100%;
+}
+
 section {
     height: 650px;
 }
@@ -225,6 +224,7 @@ aside {
     flex-wrap: wrap;
     justify-content: flex-start;
     flex-direction: column;
+    width: 100%;
 }
 
 .widget {
@@ -236,44 +236,6 @@ aside {
     justify-content: space-around;
 }
 
-.widget:hover .contenedor3d {
-    transform: rotateY(180deg);
-    padding: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.contenedor3d {
-    width: 100px;
-    height: 100px;
-    transform-style: preserve-3d;
-    transition: .7s ease;
-    position: relative;
-}
-
-.adelante,
-.atras {
-    position: absolute;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-}
-
-.atras {
-    transform: rotateY(180deg);
-    background-image: url(images/laventana.jpg);
-    background-size: cover;
-    width: 100px;
-    height: 100px;
-}
-
-.adelante {
-    width: 100px;
-    height: 100px;
-    background-image: url(images/za13store.jpg);
-    background-size: cover;
-}
-
 
 /*aside .widget {
 
@@ -282,10 +244,6 @@ aside {
     height: 150px;
     margin: 10px;
 }*/
-
-aside>.widget>.imagen>img {
-    width: 10%;
-}
 
 footer {
     background: #2c3e50;
@@ -296,6 +254,7 @@ footer {
     /* siempre se usa display flex para los contenedores padres*/
     flex-wrap: wrap;
     justify-content: space-between;
+    overflow: hidden;
 }
 
 footer .links {
@@ -323,6 +282,155 @@ footer .redes a {
     display: inline-block;
 }
 
+
+/* estilo para la barra del scroll*/
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #054c7c;
+    border-radius: 5px;
+}
+
+
+/* Estilos del modal*/
+
+.vermas {
+    text-decoration: none;
+    color: #000;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgb(7, 7, 8);
+    display: flex;
+    --opacity: 0;
+    --pointer: none;
+    opacity: var(--opacity);
+    pointer-events: var(--pointer);
+    transition: opacity .5s;
+}
+
+.titulodelmodal {
+    text-align: center;
+}
+
+.modal:target {
+    --opacity: 1;
+    --pointer: unset;
+}
+
+.contenedordemodal {
+    background-color: rgb(255, 255, 255);
+    width: 90%;
+    max-width: 600px;
+    max-height: 90%;
+    margin: auto;
+    overflow: hidden;
+    padding: 2.5em 1.5em;
+    border-radius: 1em;
+    overflow: auto;
+}
+
+.vermas2 {
+    text-decoration: none;
+}
+
+.modal2 {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgb(7, 7, 8);
+    display: flex;
+    --opacity: 0;
+    --pointer: none;
+    opacity: var(--opacity);
+    pointer-events: var(--pointer);
+    transition: opacity .5s;
+}
+
+.modal2:target {
+    --opacity: 1;
+    --pointer: unset;
+}
+
+.contenedordemodal2 {
+    background-color: rgb(255, 255, 255);
+    width: 90%;
+    max-width: 600px;
+    max-height: 90%;
+    margin: auto;
+    text-align: center;
+    overflow: hidden;
+    padding: 2.5em 1.5em;
+    border-radius: 1em;
+}
+
+.imagenmodal2 {
+    width: 60%;
+    margin: 0 auto;
+    max-width: 400px;
+    margin-bottom: 2em;
+}
+
+.modal_close {
+    display: inline-block;
+    text-decoration: none;
+    border: 1px solid #1b79bd;
+    padding: 1em 2em;
+    font-weight: 700;
+    border-radius: .4em;
+    color: #1b79bd;
+}
+
+.modal_close:active {
+    display: inline-block;
+    text-decoration: none;
+    background: #1b79bd;
+    padding: 1em 2em;
+    font-weight: 700;
+    border-radius: .4em;
+    color: #f7f7f7;
+}
+
+.modal_close:hover {
+    display: inline-block;
+    text-decoration: none;
+    background: #1b79bd;
+    padding: 1em 2em;
+    font-weight: 700;
+    border-radius: .4em;
+    color: #f7f7f7;
+    transition: 1s;
+}
+
+.imagenmodal2 img {
+    width: 100%;
+    display: block;
+}
+
+.modal:target .contenedordemodal {
+    animation: show 1s .5s backwards;
+}
+
+.modal2:target .contenedordemodal2 {
+    animation: show 1s .5s backwards;
+}
+
+@keyframes show {
+    0% {
+        transform: translateY(-150vh);
+    }
+}
+
 @media screen and (max-width: 800px) {
     .container {
         display: flex;
@@ -342,6 +450,7 @@ footer .redes a {
     .textos {
         display: flex;
         justify-content: center;
+        text-align: center;
         flex-direction: column;
         margin: 10px;
     }
@@ -384,6 +493,9 @@ footer .redes a {
 }
 
 @media screen and (max-width: 600px) {
+    .cuerpodelformulario {
+        margin: 20px;
+    }
     section img {
         height: 40%;
     }
@@ -401,7 +513,7 @@ footer .redes a {
         font-size: 20px;
     }
     article {
-        font-size: 50%;
+        font-size: 70%;
     }
     aside {
         display: flex;
@@ -417,6 +529,9 @@ footer .redes a {
 }
 
 @media (min-width:450px) and (max-width:599px) {
+    .cuerpodelformulario {
+        margin: 20px;
+    }
     .main {
         height: auto;
         flex-direction: column-reverse;
@@ -425,6 +540,7 @@ footer .redes a {
     .cuerpo {
         display: flex;
         flex-wrap: wrap;
+        width: 100%;
     }
     .textos h1 {
         font-size: 30px;
@@ -444,6 +560,9 @@ footer .redes a {
     .main article {
         width: 100%;
     }
+    article {
+        font-size: 70%;
+    }
 }
 
 @media (min-width:350px) and (max-width:449px) {
@@ -453,11 +572,13 @@ footer .redes a {
         align-items: center;
     }
     article {
+        font-size: 70%;
         margin-top: 30px;
     }
     .cuerpo {
         display: flex;
         flex-wrap: wrap;
+        width: 100%;
     }
     .textos h1 {
         font-size: 30px;
@@ -557,6 +678,7 @@ input {
 }
 
 .dudas {
+    text-align: center;
     color: #fff;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
@@ -615,14 +737,14 @@ input {
     color: #c5c5c5;
 }
 
-.campo .btn-enviar {   display: block;
+.campo .btn-enviar {
+    display: block;
     width: 100%;
     padding: 1em 0;
     box-shadow: 0 0 0 2px #00B7FF;
     color: #00B7FF;
     cursor: pointer;
     transition: all .3s;
-   
 }
 
 .campo .btn-enviar:hover {
